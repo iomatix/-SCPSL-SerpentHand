@@ -4,7 +4,7 @@
 // Licensed under the CC BY-SA 3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
-
+/*
 namespace Exiled.Example.Commands
 {
 #pragma warning disable SA1402
@@ -85,3 +85,4 @@ namespace Exiled.Example.Commands
         }
     }
 }
+*/

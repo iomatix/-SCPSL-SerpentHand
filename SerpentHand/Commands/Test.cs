@@ -4,7 +4,7 @@
 // Licensed under the CC BY-SA 3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
-
+/*
 namespace Exiled.Example.Commands
 {
     using System;
@@ -53,3 +53,4 @@ namespace Exiled.Example.Commands
         }
     }
 }
+*/

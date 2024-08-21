@@ -1,11 +1,4 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="Scp999Behaviour.cs" company="Exiled Team">
-// Copyright (c) Exiled Team. All rights reserved.
-// Licensed under the CC BY-SA 3.0 license.
-// </copyright>
-// -----------------------------------------------------------------------
-
-namespace Exiled.Example.TestRole
+﻿namespace Exiled.Example.SerpentHandRole
 {
     using Exiled.CustomModules.API.Features.CustomRoles;
 
