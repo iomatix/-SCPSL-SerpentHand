@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Exiled.Example
+namespace Plugin.Translation
 {
     using Exiled.API.Interfaces;
 

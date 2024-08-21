@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Exiled.Example
+namespace Plugin.EventHandlers
 {
     using Exiled.API.Features;
     using Exiled.Events.EventArgs.Player;

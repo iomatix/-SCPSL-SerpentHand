@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Exiled.Example
+namespace Plugin
 {
     using System;
     using Exiled.API.Enums;
