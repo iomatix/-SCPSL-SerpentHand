@@ -12,10 +12,13 @@
 
     /// <inheritdoc />
     [ModuleIdentifier]
-    public class SerpentHandRoleAdept : CustomRole<SerpentHandSHLeaderBehaviour>
+    public class SerpentHandRoleAdept : CustomRole<SerpentHandSHAdeptBehaviour>
     {
         /// <inheritdoc />
         public override uint Id { get; set; } = CustomRoleTypes.SerpentHandAdept;
+
+        /// <inheritdoc />
+        public override string Name { get; set; } = "Serpent`s Hand Adept";
 
         /// <inheritdoc />
         public override bool IsTeamUnit { get; set; } = true;
@@ -27,15 +30,12 @@
         public override int MaxInstances { get; set; } = 4;
 
         /// <inheritdoc />
-        public override string Name { get; set; } = "Serpent's Hand Adept";
-
-        /// <inheritdoc />
         public override bool IsEnabled { get; set; } = true;
 
         /// <inheritdoc />
-        public override string Description { get; set; } = "The Serpent's Hand is a small but formidable organization that embraces the use and existence of paranormal items, particularly humanoid and sapient SCP objects. They have been vocal in judging the containment and destruction of SCP items, especially those not seen as dangerous.";
+        public override string Description { get; set; } = "The Serpent`s Hand is a small but formidable organization that embraces the use and existence of paranormal items, particularly humanoid and sapient SCP objects. They have been vocal in judging the containment and destruction of SCP items, especially those not seen as dangerous.";
 
-        public RoleSettings Settings { get; set; } = new RoleSettings()
+        public virtual RoleSettings Settings { get; set; } = new RoleSettings()
         {
             UseDefaultRoleOnly = false,
             UniqueRole = RoleTypeId.CustomRole,
@@ -43,9 +43,9 @@
             Health = 125,
             MaxHealth = 125,
             Scale = 1.0f,
-            CustomInfo = "Serpent's Hand Adept\nThe Adept participates in the SCP rescue mission",
+            CustomInfo = "Serpent`s Hand Adept\nThe Adept participates in the SCP rescue mission",
 
-            SpawnedText = new TextDisplay("You've been spawned as Serpent's Hand Adept.\nYour task is to rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
+            SpawnedText = new TextDisplay("You've been spawned as Serpent`s Hand Adept.\nYour task is to rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
 
             PreservePosition = false,
 
@@ -74,7 +74,7 @@
 
         //public string ExampleConfigurableParam { get; set; } = 'example';
 
-        public InventoryManager InitialInventory { get; set; } = new InventoryManager(
+        public virtual InventoryManager InitialInventory { get; set; } = new InventoryManager(
             new List<ItemType> {
                 ItemType.ArmorCombat,
                 ItemType.GunCOM18,

@@ -14,10 +14,10 @@
 
     {
         /// <inheritdoc />
-        public override string Name { get; set; } = "Serpent's Hand";
+        public override string Name { get; set; } = "Serpent`s Hand";
 
         /// <inheritdoc />
-        public override string DisplayName { get; set; } = "Serpent's Hand";
+        public override string DisplayName { get; set; } = "Serpent`s Hand";
 
         /// <inheritdoc />
         public override string DisplayColor { get; set; } = "Purple";
