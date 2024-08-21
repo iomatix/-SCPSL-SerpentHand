@@ -3,24 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerpentHand", "SerpentHand\SerpentHand.csproj", "{43D03230-B6EA-41EB-A733-98058F0BF4D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerpentHand", "SerpentHand\SerpentHand.csproj", "{9D46E1AF-39C0-461A-99FA-02DBAB987DD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Installer|Any CPU = Installer|Any CPU
-		Optimized|Any CPU = Optimized|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Installer|Any CPU.ActiveCfg = Debug|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Installer|Any CPU.Build.0 = Debug|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Optimized|Any CPU.ActiveCfg = Debug|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Optimized|Any CPU.Build.0 = Debug|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43D03230-B6EA-41EB-A733-98058F0BF4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D46E1AF-39C0-461A-99FA-02DBAB987DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D46E1AF-39C0-461A-99FA-02DBAB987DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D46E1AF-39C0-461A-99FA-02DBAB987DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D46E1AF-39C0-461A-99FA-02DBAB987DD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
