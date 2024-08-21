@@ -10,11 +10,11 @@
 
     /// <inheritdoc />
     [ModuleIdentifier]
-    public class SerpentHandRoleInitiate : CustomRole<SerpentHandSHLeaderBehaviour>
+    public class SerpentHandRoleAdept : CustomRole<SerpentHandSHLeaderBehaviour>
     {
 
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomRoleTypes.SerpentHandInitiate;
+        public override uint Id { get; set; } = CustomRoleTypes.SerpentHandAdept;
         /// <inheritdoc />
         public override bool IsTeamUnit { get; set; } = true;
         /// <inheritdoc />

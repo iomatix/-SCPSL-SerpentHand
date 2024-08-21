@@ -1,4 +1,4 @@
-﻿namespace Plugin.SerpentHand.Config
+﻿namespace Exiled.Example.SerpentHandRole
 {
     using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
@@ -9,6 +9,6 @@
     public class SerpentHandConfig : ModulePointer<CustomRole>
     {
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomRoleTypes.SerpentHand;
+        //public override uint Id { get; set; } = CustomRoleType.;
     }
 }

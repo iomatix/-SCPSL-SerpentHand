@@ -8,13 +8,14 @@
 namespace Plugin
 {
     using System;
-    using Exiled.API.Enums;
+    using System.ComponentModel;
+    using Exiled.API.Interfaces;
     using Exiled.API.Features;
 
     /// <summary>
     /// The example plugin.
     /// </summary>
-    public class Plugin : Plugin<Config, Translation>
+    public class Plugin : Plugin<Configuration.Config, PluginTranslation.Translation>
     {
         /// <summary>
         /// Gets the only existing instance of this plugin.
