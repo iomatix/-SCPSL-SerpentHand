@@ -9,6 +9,6 @@
     /// </summary>
     public class CustomTeamType : UUCustomTeamType
     {
-        public static readonly CustomTeamType SerpentHand = new();
+        public static readonly CustomTeamType SerpentHand = new CustomTeamType();
     }
 }

@@ -10,5 +10,6 @@
     {
         /// <inheritdoc />
         //public override uint Id { get; set; } = CustomRoleType.;
+        public override uint Id { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
     }
 }
