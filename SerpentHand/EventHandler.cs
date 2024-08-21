@@ -17,7 +17,6 @@ namespace Plugin.EventHandlers
     /// </summary>
     public class EventHandler
     {
-
         private readonly Plugin _plugin;
 
         public EventHandler(Plugin plugin) => _plugin = plugin;
@@ -29,14 +28,12 @@ namespace Plugin.EventHandlers
         /// </summary>
         public void OnRoundStarted()
         {
-           //if (UnityEngine.Random.Range(0, 100) <= _plugin.Config.Spawnchance)
+            //if (UnityEngine.Random.Range(0, 100) <= _plugin.Config.Spawnchance)
             {
                 //_plugin.Methods.Init();
                 //Coroutines.Add(Timing.RunCoroutine(_plugin.Methods.StartLockdownRoutine()));
-
             }
         }
-
 
         /// <summary>
         /// Triggers on the beginning of the each round during waiting screen.
@@ -46,7 +43,6 @@ namespace Plugin.EventHandlers
             //_plugin.Methods.Clean();
             foreach (CoroutineHandle handle in Coroutines) Timing.KillCoroutines(handle);
             Coroutines.Clear();
-
         }
 
         /// <summary>

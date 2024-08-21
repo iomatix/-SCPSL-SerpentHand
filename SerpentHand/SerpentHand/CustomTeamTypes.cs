@@ -1,7 +1,5 @@
 ﻿namespace Plugin.SerpentHand.Types
 {
-
-
     using Exiled.CustomModules.API.Enums;
 
     /// <summary>

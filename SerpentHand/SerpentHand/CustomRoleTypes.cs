@@ -8,11 +8,9 @@
     /// </summary>
     public class CustomRoleTypes : UUCustomRoleType
     {
-
         public static readonly CustomRoleTypes SerpentHandTemplate = new CustomRoleTypes();
         public static readonly CustomRoleTypes SerpentHandLeader = new CustomRoleTypes();
         public static readonly CustomRoleTypes SerpentHandAdept = new CustomRoleTypes();
         public static readonly CustomRoleTypes SerpentHandInitiate = new CustomRoleTypes();
-
     }
 }

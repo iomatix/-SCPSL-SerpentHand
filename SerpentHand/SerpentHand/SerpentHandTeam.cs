@@ -1,14 +1,12 @@
 ﻿namespace SerpentHand.SerpentHand
 {
     using System.Collections.Generic;
-    using Exiled.API.Features.Attributes;
     using Exiled.CustomModules.API.Enums;
     using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
     using PlayerRoles;
     using Plugin.SerpentHand.Types;
     using Respawning;
-
 
     /// <inheritdoc />
     [ModuleIdentifier]
@@ -17,6 +15,12 @@
     {
         /// <inheritdoc />
         public override string Name { get; set; } = "Serpent's Hand";
+
+        /// <inheritdoc />
+        public override string DisplayName { get; set; } = "Serpent's Hand";
+
+        /// <inheritdoc />
+        public override string DisplayColor { get; set; } = "Purple";
 
         /// <inheritdoc />
         public override uint Id { get; set; } = CustomTeamTypes.SerpentHand;
@@ -32,11 +36,10 @@
         /// <summary>
         /// Specifies the roles that form the team using custom enum.
         /// </summary>
-        public virtual IEnumerable<uint> Units { get; set; } = new uint[] { 
-            CustomRoleTypes.SerpentHandInitiate, 
-            CustomRoleTypes.SerpentHandAdept, 
+        public virtual IEnumerable<uint> Units { get; set; } = new uint[] {
+            CustomRoleTypes.SerpentHandInitiate,
+            CustomRoleTypes.SerpentHandAdept,
             CustomRoleTypes.SerpentHandLeader, };
-
 
         /// <summary>
         /// Indicates the likelihood of the team being included in the spawn queue.
@@ -47,7 +50,8 @@
         /// IContains the teams from which this team should be queued.
         /// </summary>
         public virtual SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
-            SpawnableTeamType.None, 
+            SpawnableTeamType.None,
+            SpawnableTeamType.NineTailedFox,
             SpawnableTeamType.ChaosInsurgency,
         };
 
@@ -61,11 +65,8 @@
         /// </summary>
         public virtual uint Tickets { get; set; } = 13;
 
-
         public virtual RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.None;
 
         public virtual Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive };
-
-        
     }
 }
