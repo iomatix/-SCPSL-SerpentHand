@@ -19,7 +19,7 @@
         public override string Name { get; set; } = "Serpent's Hand";
 
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomTeamType.SerpentHand;
+        public override uint Id { get; set; } = CustomTeamTypes.SerpentHand;
 
         /// <inheritdoc />
         public override bool IsEnabled { get; set; } = true;
