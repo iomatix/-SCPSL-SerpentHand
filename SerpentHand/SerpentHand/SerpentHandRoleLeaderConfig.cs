@@ -25,13 +25,13 @@
             UseDefaultRoleOnly = false,
             UniqueRole = RoleTypeId.CustomRole,
 
-            Health = 100,
-            MaxHealth = 100,
-            Scale = 0.95f,
+            Health = 145,
+            MaxHealth = 145,
+            Scale = 1.04f,
             CustomInfo = "Serpent's Hand Leader\nHelps with the SCP rescue mission",
 
 
-            SpawnedText = new TextDisplay("You've been spawned as Serpent's Hand Initiate.\nHelp to rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
+            SpawnedText = new TextDisplay("You've been spawned as Serpent's Hand Leader.\nLead your troops and rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
 
             PreservePosition = false,
 

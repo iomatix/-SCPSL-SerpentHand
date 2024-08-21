@@ -17,7 +17,7 @@
     public class SerpentHandRoleIAdeptConfig : ModulePointer<CustomRole>
     {
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomRoleTypes.SerpentHandInitiate;
+        public override uint Id { get; set; } = CustomRoleTypes.SerpentHandAdept;
 
 
         public RoleSettings Settings { get; set; } = new RoleSettings()

@@ -7,8 +7,8 @@
     /// <summary>
     /// The custom team type.
     /// </summary>
-    public class CustomTeamType : UUCustomTeamType
+    public class CustomTeamTypes : UUCustomTeamType
     {
-        public static readonly CustomTeamType SerpentHand = new CustomTeamType();
+        public static readonly CustomTeamTypes SerpentHand = new CustomTeamTypes();
     }
 }
