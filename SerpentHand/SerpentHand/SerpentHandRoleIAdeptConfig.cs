@@ -9,12 +9,13 @@
     using Exiled.CustomModules.API.Features.Generic;
     using Exiled.CustomModules.API.Features.Inventory;
     using PlayerRoles;
+    using Plugin.SerpentHand.RoleBehaviour;
     using Plugin.SerpentHand.Types;
 
 
     /// <inheritdoc />
     [ModuleIdentifier]
-    public class SerpentHandRoleIAdeptConfig : ModulePointer<CustomRole>
+    public class SerpentHandRoleIAdeptConfig : ModulePointer<CustomRole<SerpentHandSHLeaderBehaviour>>
     {
         /// <inheritdoc />
         public override uint Id { get; set; } = CustomRoleTypes.SerpentHandAdept;

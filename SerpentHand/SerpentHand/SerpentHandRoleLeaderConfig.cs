@@ -9,14 +9,15 @@
     using Exiled.CustomModules.API.Features.Generic;
     using Exiled.CustomModules.API.Features.Inventory;
     using PlayerRoles;
+    using Plugin.SerpentHand.RoleBehaviour;
     using Plugin.SerpentHand.Types;
 
     /// <inheritdoc />
     [ModuleIdentifier]
-    public class SerpentHandRoleLeaderConfig : ModulePointer<CustomRole>
+    public class SerpentHandRoleLeaderConfig : ModulePointer<CustomRole<SerpentHandSHLeaderBehaviour>>
     {
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomRoleTypes.SerpentHandInitiate;
+        public override uint Id { get; set; } = CustomRoleTypes.SerpentHandLeader;
 
 
         public RoleSettings Settings { get; set; } = new RoleSettings()
