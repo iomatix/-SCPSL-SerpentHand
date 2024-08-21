@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Scp999Config.cs" company="Exiled Team">
+// <copyright file="Scp999Behaviour.cs" company="Exiled Team">
 // Copyright (c) Exiled Team. All rights reserved.
 // Licensed under the CC BY-SA 3.0 license.
 // </copyright>
@@ -7,15 +7,15 @@
 
 namespace Exiled.Example.TestRole
 {
-    using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
-    using Exiled.CustomModules.API.Features.Generic;
 
     /// <inheritdoc />
-    [ModuleIdentifier]
-    public class Scp999Config : ModulePointer<CustomRole>
+    public class SerpentHandBehaviour : RoleBehaviour
     {
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomRoleType.Scp999;
+        protected override void PostInitialize()
+        {
+            base.PostInitialize();
+        }
     }
 }

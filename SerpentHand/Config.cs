@@ -15,6 +15,12 @@ namespace Exiled.Example
         /// <inheritdoc/>
         public bool IsEnabled { get; set; } = true;
 
+
+
+
+
+
+
         /// <inheritdoc />
         public bool Debug { get; set; } = false;
     }

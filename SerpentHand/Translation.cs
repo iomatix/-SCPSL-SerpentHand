@@ -15,6 +15,6 @@ namespace Exiled.Example
         /// <summary>
         /// Gets or Sets Some Text That Goes In Your Translations Configuration File.
         /// </summary>
-        public string ExampleTranslation { get; set; } = "Example Translation Text";
+        //public string ExampleTranslation { get; set; } = "Example Translation Text";
     }
 }

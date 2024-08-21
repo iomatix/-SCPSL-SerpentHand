@@ -13,9 +13,9 @@ namespace Exiled.Example.TestRole
 
     /// <inheritdoc />
     [ModuleIdentifier]
-    public class Scp999Config : ModulePointer<CustomRole>
+    public class SerpentHandConfig : ModulePointer<CustomRole>
     {
         /// <inheritdoc />
-        public override uint Id { get; set; } = CustomRoleType.Scp999;
+        public override uint Id { get; set; } = CustomRoleType.SerpentHand;
     }
 }
