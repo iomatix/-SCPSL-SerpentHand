@@ -16,7 +16,7 @@
 
     {
         /// <inheritdoc />
-        public override string Name { get; set; } = "Serpent Hand";
+        public override string Name { get; set; } = "Serpent's Hand";
 
         /// <inheritdoc />
         public override uint Id { get; set; } = CustomTeamType.SerpentHand;

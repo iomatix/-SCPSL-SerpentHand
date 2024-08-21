@@ -6,7 +6,7 @@
 
     /// <inheritdoc />
     [ModuleIdentifier]
-    public class SerpentHandConfig : ModulePointer<CustomRole>
+    public class SerpentHandTeamConfig : ModulePointer<CustomRole>
     {
         /// <inheritdoc />
         //public override uint Id { get; set; } = CustomRoleType.;

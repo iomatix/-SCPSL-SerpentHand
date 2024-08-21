@@ -21,36 +21,15 @@
         public override Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive, };
 
         /// <inheritdoc />
-        public override int MaxInstances { get; set; } = 1;
+        public override int MaxInstances { get; set; } = 3;
+
+        /// <inheritdoc />
+        public override string Name { get; set; } = "Serpent's Hand Initiate";
+        /// <inheritdoc />
+        public override bool IsEnabled { get; set; } = true;
+        /// <inheritdoc />
+        public override string Description { get; set; } = "The Serpent's Hand is a small but formidable organization that embraces the use and existence of paranormal items, particularly humanoid and sapient SCP objects. They have been vocal in judging the containment and destruction of SCP items, especially those not seen as dangerous.";
 
 
-        public override RoleSettings Settings { get; set; } = new RoleSettings()
-        {
-            UseDefaultRoleOnly = true,
-            UniqueRole = RoleTypeId.CustomRole,
-
-            Health = 100,
-            MaxHealth = 100,
-            Scale = 0.95f,
-            CustomInfo = "Serpent Hand Leader\nHelps with the SCP rescue mission",
-
-            SpawnedText = new TextDisplay("You've been spawned as Serpent Hand Initiate.\nHelp to rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
-
-            PreservePosition = false,
-
-            PreserveInventory = true,
-
-            CanActivateWarhead = true,
-
-            CanBypassCheckpoints = false,
-            CanActivateGenerators = true,
-            CanPlaceBlood = true,
-            CanBeHurtByScps = true,
-            CanHurtScps = true,
-            CanBeHandcuffed = true,
-
-            DoesLookingAffectScp096 = true,
-            DoesLookingAffectScp173 = true,
-        };
     }
 }

@@ -8,9 +8,8 @@
 namespace Plugin
 {
     using System;
-    using System.ComponentModel;
-    using Exiled.API.Interfaces;
     using Exiled.API.Features;
+    using Exiled.API.Enums;
 
     /// <summary>
     /// The example plugin.
@@ -37,10 +36,14 @@ namespace Plugin
         /// <inheritdoc/>
         public override string Author { get; } = "iomatix";
 
+        /// <inheritdoc/>
+
+        public override PluginPriority Priority => PluginPriority.Medium;
+
         /// <summary>
         /// Gets the current instance of the event handler.
         /// </summary>
-        public EventHandler EventHandler { get; private set; }
+        public EventHandlers.EventHandler EventHandlers { get; private set; }
 
         /// <inheritdoc/>
         public override void OnEnabled()
@@ -49,7 +52,7 @@ namespace Plugin
             Instance = this;
 
             // Create new instance of the event handler
-            EventHandler = new EventHandler();
+            EventHandlers = new EventHandlers.EventHandler(this);
 
             base.OnEnabled();
         }
@@ -58,12 +61,14 @@ namespace Plugin
         public override void OnDisabled()
         {
             // Finishes the event handler
-            EventHandler = null;
+            EventHandlers = null;
 
             base.OnDisabled();
         }
 
-
+        /// <summary>
+        /// Registers events to the event handler.
+        /// </summary>
         private void RegisterEvents()
         {
             //Server = new Server(this);
@@ -73,6 +78,9 @@ namespace Plugin
             //Exiled.Events.Handlers.Server.WaitingForPlayers += Server.OnWaitingForPlayers;
         }
 
+        /// <summary>
+        /// Unregisters events to the event handler.
+        /// </summary>
         private void UnRegisterEvents()
         {
             //Exiled.Events.Handlers.Server.RoundStarted -= Server.OnRoundStarted;

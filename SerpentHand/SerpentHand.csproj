@@ -105,11 +105,14 @@
     <Compile Include="SerpentHand\CustomRoleTypes.cs" />
     <Compile Include="SerpentHand\CustomTeamTypes.cs" />
     <Compile Include="SerpentHand\SerpentHandRoleAdept.cs" />
+    <Compile Include="SerpentHand\SerpentHandRoleLeaderConfig.cs" />
+    <Compile Include="SerpentHand\SerpentHandRoleIAdeptConfig.cs" />
+    <Compile Include="SerpentHand\SerpentHandTeamConfig.cs" />
     <Compile Include="SerpentHand\SerpentHandRoleInitiate.cs" />
     <Compile Include="SerpentHand\SerpentHandSHAdeptBehaviour.cs" />
     <Compile Include="SerpentHand\SerpentHandSHInitiateBehaviour.cs" />
     <Compile Include="SerpentHand\SerpentHandSHLeaderBehaviour.cs" />
-    <Compile Include="SerpentHand\SerpentHandConfig.cs" />
+    <Compile Include="SerpentHand\SerpentHandRoleInitiateConfig.cs" />
     <Compile Include="SerpentHand\SerpentHandRoleLeader.cs" />
     <Compile Include="SerpentHand\SerpentHandTeam.cs" />
     <Compile Include="Translation.cs" />
