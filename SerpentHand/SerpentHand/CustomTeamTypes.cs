@@ -1,6 +1,7 @@
-﻿namespace Plugin.SerpentHand.Types
+﻿namespace SerpentHand.Types
 {
     using Exiled.CustomModules.API.Enums;
+    using Exiled.CustomModules.API.Features.Attributes;
 
     /// <summary>
     /// The custom team type.

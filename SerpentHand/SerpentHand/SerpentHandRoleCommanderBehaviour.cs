@@ -1,5 +1,6 @@
-﻿namespace Plugin.SerpentHand.RoleBehaviour
+﻿namespace SerpentHand.Behaviours
 {
+    using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
 
     /// <inheritdoc />

@@ -1,16 +1,14 @@
-﻿namespace Plugin.SerpentHand.SerpentHandRole
+﻿namespace SerpentHand.Configs
 {
     using Exiled.API.Enums;
     using Exiled.API.Features;
     using Exiled.API.Features.Spawn;
-    using Exiled.CustomModules.API.Enums;
-    using Exiled.CustomModules.API.Features;
     using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
     using Exiled.CustomModules.API.Features.Generic;
     using Exiled.CustomModules.API.Features.Inventory;
-    using global::Plugin.SerpentHand.Types;
     using PlayerRoles;
+    using SerpentHand.Types;
     using System.Collections.Generic;
 
     /// <inheritdoc />

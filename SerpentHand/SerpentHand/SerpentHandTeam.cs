@@ -1,12 +1,11 @@
-﻿namespace SerpentHand.SerpentHand
+﻿namespace SerpentHand
 {
     using System.Collections.Generic;
-    using Exiled.CustomModules.API.Enums;
     using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
     using PlayerRoles;
-    using Plugin.SerpentHand.Types;
     using Respawning;
+    using SerpentHand.Types;
 
     /// <inheritdoc />
     [ModuleIdentifier]

@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Plugin.PluginTranslation
+namespace SerpentHand
 {
     using Exiled.API.Interfaces;
 

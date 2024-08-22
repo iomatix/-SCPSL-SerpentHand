@@ -1,11 +1,13 @@
-﻿namespace Plugin.SerpentHand.Types
+﻿namespace SerpentHand.Types
 {
     using Exiled.CustomModules.API.Enums;
+    using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
 
     /// <summary>
     /// The custom role type.
     /// </summary>
+    [ModuleIdentifier]
     public class CustomRoleTypes : UUCustomRoleType
     {
         // Leader

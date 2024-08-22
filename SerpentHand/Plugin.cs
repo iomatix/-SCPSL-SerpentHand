@@ -5,69 +5,54 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Plugin
+namespace SerpentHand
 {
     using System;
     using Exiled.API.Features;
-    using Exiled.API.Enums;
-    using Exiled.CustomModules.API.Features.CustomRoles;
+    using Exiled.Events;
+    using MEC;
 
-    /// <summary>
-    /// The example plugin.
-    /// </summary>
-    public class Plugin : Plugin<Configuration.Config, PluginTranslation.Translation>
+    using Server = Exiled.Events.Handlers.Server;
+
+    public class Plugin : Plugin<Config, Translation>
     {
-        /// <summary>
-        /// Gets the only existing instance of this plugin.
-        /// </summary>
         public static Plugin Instance { get; private set; }
-
-        /// <inheritdoc/>
-        public override string Name { get; } = "SerpentHand";
-
-        /// <inheritdoc/>
-        public override string Prefix => "SerpentHand";
-
-        /// <inheritdoc/>
-        public override Version Version => new Version(0, 1, 0);
-
-        /// <inheritdoc/>
-        public override Version RequiredExiledVersion => new Version(9, 0, 0);
-
-        /// <inheritdoc/>
         public override string Author { get; } = "iomatix";
 
-        /// <inheritdoc/>
+        public override string Name { get; } = "SerpentHand";
 
-        public override PluginPriority Priority => PluginPriority.Higher;
+        public override string Prefix => "SerpentHand";
 
-        /// <summary>
-        /// Gets the current instance of the event handler.
-        /// </summary>
-        public EventHandlers.EventHandler EventHandlers { get; private set; }
+        public override Version Version => new Version(0, 1, 0);
+
+        public override Version RequiredExiledVersion => new Version(9, 0, 0);
+
+        //internal Methods Methods { get; private set; }
+        internal EventHandlers EventHandlers { get; private set; }
+
 
         /// <inheritdoc/>
         public override void OnEnabled()
         {
-            // Set the instance to the current one
             Instance = this;
+            EventHandlers = new EventHandlers(this);
+            //Methods = new Methods(this);
 
-            
             //CustomRole.EnableAll();
             //CustomTeam.EnableAll();
 
-            // Create new instance of the event handler
-            EventHandlers = new EventHandlers.EventHandler(this);
-
+            RegisterEvents();
             base.OnEnabled();
         }
 
         /// <inheritdoc/>
         public override void OnDisabled()
         {
-            // Finishes the event handler
+            foreach (CoroutineHandle handle in EventHandlers.Coroutines) Timing.KillCoroutines(handle);
+            EventHandlers.Coroutines.Clear();
             EventHandlers = null;
 
+            UnRegisterEvents();
             base.OnDisabled();
         }
 
@@ -76,11 +61,7 @@ namespace Plugin
         /// </summary>
         private void RegisterEvents()
         {
-            //Server = new Server(this);
-            //Methods = new Methods(this);
-            //Exiled.Events.Handlers.Server.RoundStarted += Server.OnRoundStarted;
-            //Exiled.Events.Handlers.Server.RoundEnded += Server.OnRoundEnded;
-            //Exiled.Events.Handlers.Server.WaitingForPlayers += Server.OnWaitingForPlayers;
+            Server.WaitingForPlayers += EventHandlers.OnWaitingForPlayers;
         }
 
         /// <summary>
@@ -88,12 +69,7 @@ namespace Plugin
         /// </summary>
         private void UnRegisterEvents()
         {
-            //Exiled.Events.Handlers.Server.RoundStarted -= Server.OnRoundStarted;
-            //Exiled.Events.Handlers.Server.RoundEnded -= Server.OnRoundEnded;
-            //Exiled.Events.Handlers.Server.WaitingForPlayers -= Server.OnWaitingForPlayers;
-
-            //Server = null;
-            //Methods = null;
+            Server.WaitingForPlayers -= EventHandlers.OnWaitingForPlayers;
         }
     }
 }
