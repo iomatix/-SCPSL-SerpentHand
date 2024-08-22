@@ -38,7 +38,7 @@ namespace Plugin
 
         /// <inheritdoc/>
 
-        public override PluginPriority Priority => PluginPriority.Medium;
+        public override PluginPriority Priority => PluginPriority.Higher;
 
         /// <summary>
         /// Gets the current instance of the event handler.

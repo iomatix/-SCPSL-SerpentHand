@@ -3,8 +3,9 @@
     using Exiled.CustomModules.API.Features.CustomRoles;
 
     /// <inheritdoc />
-    public class SerpentHandSHInitiateBehaviour : RoleBehaviour
+    public class SerpentHandRoleCommanderBehaviour : RoleBehaviour
     {
+
         /// <inheritdoc />
         protected override void PostInitialize()
         {

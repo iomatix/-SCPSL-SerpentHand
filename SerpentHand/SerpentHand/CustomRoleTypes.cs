@@ -8,9 +8,22 @@
     /// </summary>
     public class CustomRoleTypes : UUCustomRoleType
     {
-        public static readonly CustomRoleTypes SerpentHandTemplate = new CustomRoleTypes();
-        public static readonly CustomRoleTypes SerpentHandLeader = new CustomRoleTypes();
-        public static readonly CustomRoleTypes SerpentHandAdept = new CustomRoleTypes();
-        public static readonly CustomRoleTypes SerpentHandInitiate = new CustomRoleTypes();
+        // Leader
+        // TODO: Can vanish by using skill and go through doors (during this). Reappears after X time or on any action or on any damage.
+        // TODO: Can dodge bullets for x secs after reappeared
+        public static readonly CustomRoleTypes SerpentHandCommander = new CustomRoleTypes();
+
+        // Breach Front Line
+        // TODO: Has best load out and best HP
+        public static readonly CustomRoleTypes SerpentHandEnforcer = new CustomRoleTypes();
+        // TODO: Breaching tools or skill (boom)
+        public static readonly CustomRoleTypes SerpentHandBreaker = new CustomRoleTypes();
+
+
+        // Stealth
+        // TODO: Can vanish by using SCP coin
+        public static readonly CustomRoleTypes SerpentHandPhantom = new CustomRoleTypes();
+        // TODO: Can see the sound
+        public static readonly CustomRoleTypes SerpentHandNavigator = new CustomRoleTypes();
     }
 }
