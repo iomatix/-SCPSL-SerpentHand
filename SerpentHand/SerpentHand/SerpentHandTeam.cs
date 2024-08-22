@@ -17,44 +17,45 @@
         public override string Name { get; set; } = "Serpent`s Hand";
 
         /// <inheritdoc />
-        public override string DisplayName { get; set; } = "Serpent`s Hand";
-
-        /// <inheritdoc />
-        public override string DisplayColor { get; set; } = "Purple";
-
-        /// <inheritdoc />
         public override uint Id { get; set; } = CustomTeamTypes.SerpentHand;
 
         /// <inheritdoc />
         public override bool IsEnabled { get; set; } = true;
 
         /// <inheritdoc />
-        public override int Size { get; set; } = 7;
+        public virtual string DisplayName { get; set; } = "Serpent`s Hand";
 
         /// <inheritdoc />
-        public override IEnumerable<uint> Units { get; set; } = new uint[] {
+        public virtual string DisplayColor { get; set; } = "magenta";
+
+        /// <inheritdoc />
+        public virtual int Size { get; set; } = 7;
+
+        /// <inheritdoc />
+        public virtual IEnumerable<uint> Units { get; set; } = new uint[] {
             CustomRoleTypes.SerpentHandCommander, };
 
         /// <inheritdoc />
-        public override int Probability { get; set; } = 100;
+        public virtual int Probability { get; set; } = 100;
 
         /// <inheritdoc />
-        public override SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
+        public virtual SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
             SpawnableTeamType.None,
             SpawnableTeamType.NineTailedFox,
             SpawnableTeamType.ChaosInsurgency,
         };
 
         /// <inheritdoc />
-        public override bool UseTickets { get; set; } = true;
+        public virtual bool UseTickets { get; set; } = true;
 
         /// <inheritdoc />
-        public override uint Tickets { get; set; } = 13;
+        public virtual uint Tickets { get; set; } = 13;
 
         /// <inheritdoc />
-        public override RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.None;
+        public virtual RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.Scientist;
 
         /// <inheritdoc />
-        public override Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive };
+        public virtual Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive };
+
     }
 }

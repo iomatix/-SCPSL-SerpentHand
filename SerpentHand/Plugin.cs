@@ -10,6 +10,7 @@ namespace Plugin
     using System;
     using Exiled.API.Features;
     using Exiled.API.Enums;
+    using Exiled.CustomModules.API.Features.CustomRoles;
 
     /// <summary>
     /// The example plugin.
@@ -50,6 +51,10 @@ namespace Plugin
         {
             // Set the instance to the current one
             Instance = this;
+
+            
+            //CustomRole.EnableAll();
+            //CustomTeam.EnableAll();
 
             // Create new instance of the event handler
             EventHandlers = new EventHandlers.EventHandler(this);

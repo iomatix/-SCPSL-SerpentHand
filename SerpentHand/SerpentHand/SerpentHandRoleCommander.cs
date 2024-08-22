@@ -4,6 +4,7 @@
     using Exiled.API.Features;
     using Exiled.API.Features.Spawn;
     using Exiled.CustomModules.API.Enums;
+    using Exiled.CustomModules.API.Features;
     using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
     using Exiled.CustomModules.API.Features.Inventory;
@@ -26,22 +27,22 @@
         public override bool IsTeamUnit { get; set; } = true;
 
         /// <inheritdoc />
-        public override RoleTypeId Role { get; set; } = RoleTypeId.ClassD;
-
-        /// <inheritdoc />
-        public override RoleTypeId AssignFromRole { get; set; } = RoleTypeId.ClassD;
-
-        /// <inheritdoc />
-        public override int Probability { get; set; } = 100;
-
-        /// <inheritdoc />
         public override Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive, };
 
         /// <inheritdoc />
-        public override int MaxInstances { get; set; } = 1;
+        //public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
 
         /// <inheritdoc />
-        public override bool IsEnabled { get; set; } = true;
+        //public override RoleTypeId AssignFromRole { get; set; } = RoleTypeId.Scientist;
+
+        /// <inheritdoc />
+        //public override int Probability { get; set; } = 100;
+
+        /// <inheritdoc />
+        //public override int MaxInstances { get; set; } = 111;
+
+        /// <inheritdoc />
+        //public override bool IsEnabled { get; set; } = true;
 
         /// <inheritdoc />
         public override string Description { get; set; } = "The Serpent`s Hand is a small but formidable organization that embraces the use and existence of paranormal items, particularly humanoid and sapient SCP objects. They have been vocal in judging the containment and destruction of SCP items, especially those not seen as dangerous.\n" +
@@ -50,76 +51,6 @@
         /// <inheritdoc />
         public override bool IsScp { get; set; } = false;
 
-        public override RoleSettings Settings { get; set; } = new RoleSettings()
-        {
-            UseDefaultRoleOnly = true,
-            UniqueRole = RoleTypeId.ClassD,
-            SpawnReason = RoleChangeReason.Respawn,
-            SpawnFlags = RoleSpawnFlags.All,
-            SpawnProperties =
-            {
-                StaticSpawnPoints =
-                {
-                    
-                },
-                DynamicSpawnPoints =
-                {
-                    new DynamicSpawnPoint { Location = SpawnLocationType.InsideServersBottom, Chance = 0.5f },
 
-                },
-                RoleSpawnPoints =
-                {
-                    new RoleSpawnPoint { Role = RoleTypeId.ChaosRifleman, Chance = 0.5f },
-                },
-            },
 
-            Health = 135,
-            MaxHealth = 135,
-            Scale = 1.01f,
-            CustomInfo = "Serpent`s Hand Commander\nLeads the SCP rescue mission",
-
-            SpawnedText = new TextDisplay("You`ve been spawned as Serpent`s Hand Commander.\nLead your troops and rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
-
-            PreservePosition = false,
-
-            PreserveInventory = true,
-
-            CanActivateWarhead = true,
-            CanUseIntercom = true,
-            CanDropItems = true,
-            CanUseElevators = true,
-            CanUseVoiceChat = true,
-            CanActivateWorkstations = true,
-            CanPickupItems = true,
-            CanEnterPocketDimension = true,
-            CanSelectItems = true,
-
-            CanBypassCheckpoints = false,
-            CanActivateGenerators = true,
-            CanPlaceBlood = true,
-            CanBeHurtByScps = true,
-            CanHurtScps = true,
-            CanBeHandcuffed = true,
-
-            DoesLookingAffectScp096 = true,
-            DoesLookingAffectScp173 = true,
-        };
-
-        public InventoryManager InitialInventory { get; set; } = new InventoryManager(
-        new List<ItemType> {
-                ItemType.ArmorCombat,
-                ItemType.GunCOM18,
-                ItemType.GunFRMG0,
-                ItemType.SCP500,
-                ItemType.Adrenaline,
-                ItemType.KeycardChaosInsurgency,
-        },
-        new List<object> { },
-        new Dictionary<AmmoType, ushort> {
-                { AmmoType.Nato556, 164 },
-                { AmmoType.Nato9, 48 },
-        },
-        new Dictionary<uint, ushort> { }
-        );
-    }
 }
