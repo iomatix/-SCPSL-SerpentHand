@@ -12,7 +12,7 @@
     {
         // Leader
         // TODO: Can vanish by using skill and go through doors (during this). Reappears after X time or on any action or on any damage.
-        // TODO: Can dodge bullets for x secs after reappeared
+        // TODO: Can dodge bullets with certain probability for x secs after reappeared
         public static readonly CustomRoleTypes SerpentHandCommander = new CustomRoleTypes();
 
         // Breach Front Line
