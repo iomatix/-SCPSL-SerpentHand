@@ -9,6 +9,7 @@ namespace SerpentHand
 {
     using System;
     using Exiled.API.Features;
+    using Exiled.CustomModules.API.Features.CustomRoles;
     using Exiled.Events;
     using MEC;
 
@@ -37,10 +38,14 @@ namespace SerpentHand
             Instance = this;
             EventHandlers = new EventHandlers(this);
             //Methods = new Methods(this);
-
-            //CustomRole.EnableAll();
-            //CustomTeam.EnableAll();
-
+            
+            CustomTeam.LoadAll();
+            CustomRole.LoadAll();
+            CustomTeam.EnableAll();
+            CustomRole.EnableAll();
+            
+            
+           
             RegisterEvents();
             base.OnEnabled();
         }
@@ -51,6 +56,12 @@ namespace SerpentHand
             foreach (CoroutineHandle handle in EventHandlers.Coroutines) Timing.KillCoroutines(handle);
             EventHandlers.Coroutines.Clear();
             EventHandlers = null;
+
+
+            CustomRole.DisableAll();
+            CustomTeam.DisableAll();
+            CustomRole.UnloadAll();
+            CustomTeam.UnloadAll();
 
             UnRegisterEvents();
             base.OnDisabled();

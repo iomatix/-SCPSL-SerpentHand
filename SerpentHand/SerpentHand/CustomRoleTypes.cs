@@ -17,15 +17,15 @@
 
         // Breach Front Line
         // TODO: Has best load out and best HP
-        public static readonly CustomRoleTypes SerpentHandEnforcer = new CustomRoleTypes();
+        //public static readonly CustomRoleTypes SerpentHandEnforcer = new CustomRoleTypes();
         // TODO: Breaching tools or skill (boom)
-        public static readonly CustomRoleTypes SerpentHandBreaker = new CustomRoleTypes();
+        //public static readonly CustomRoleTypes SerpentHandBreaker = new CustomRoleTypes();
 
 
         // Stealth
         // TODO: Can vanish by using SCP coin
-        public static readonly CustomRoleTypes SerpentHandPhantom = new CustomRoleTypes();
+        //public static readonly CustomRoleTypes SerpentHandPhantom = new CustomRoleTypes();
         // TODO: Can see the sound
-        public static readonly CustomRoleTypes SerpentHandNavigator = new CustomRoleTypes();
+        //public static readonly CustomRoleTypes SerpentHandNavigator = new CustomRoleTypes();
     }
 }

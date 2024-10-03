@@ -18,7 +18,7 @@
         /// <inheritdoc />
         public override uint Id { get; set; } = CustomRoleTypes.SerpentHandCommander;
 
-        public RoleSettings Settings { get; set; } = new RoleSettings()
+        public virtual RoleSettings Settings { get; set; } = new RoleSettings()
         {
             UseDefaultRoleOnly = true,
             IsRoleDynamic = false,
@@ -27,13 +27,14 @@
             SpawnFlags = RoleSpawnFlags.All,
             SpawnProperties =
             {
+                Limit = 1,
                 StaticSpawnPoints =
                 {
 
                 },
                 DynamicSpawnPoints =
                 {
-                    new DynamicSpawnPoint { Location = SpawnLocationType.InsideServersBottom, Chance = 1.0f },
+                    new DynamicSpawnPoint { Location = SpawnLocationType.InsideServersBottom, Chance = 100.0f },
 
                 },
                 RoleSpawnPoints =
@@ -54,8 +55,8 @@
 
             PreservePosition = false,
 
-            PreserveInventory = true,
-
+            PreserveInventory = false,
+            
             CanActivateWarhead = true,
             CanUseIntercom = true,
             CanDropItems = true,
@@ -74,10 +75,9 @@
             CanBeHandcuffed = true,
 
             DoesLookingAffectScp096 = true,
-            DoesLookingAffectScp173 = true,
+            DoesLookingAffectScp173 = true, 
         };
-
-        public InventoryManager Inventory { get; set; } = new InventoryManager(
+        public virtual InventoryManager Inventory { get; set; } = new InventoryManager(
         new List<ItemType> {
                 ItemType.ArmorCombat,
                 ItemType.GunCOM18,
@@ -94,5 +94,6 @@
         new Dictionary<uint, ushort> { }
         );
     }
+
 
 }

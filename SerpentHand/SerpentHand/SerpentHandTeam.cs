@@ -22,39 +22,53 @@
         public override bool IsEnabled { get; set; } = true;
 
         /// <inheritdoc />
-        public virtual string DisplayName { get; set; } = "Serpent`s Hand";
+        public override string DisplayName { get; set; } = "Serpent`s Hand";
 
         /// <inheritdoc />
-        public virtual string DisplayColor { get; set; } = "magenta";
+        public override string DisplayColor { get; set; } = "magenta";
 
         /// <inheritdoc />
-        public virtual int Size { get; set; } = 7;
+        public override int Size { get; set; } = 7;
 
         /// <inheritdoc />
-        public virtual IEnumerable<uint> Units { get; set; } = new uint[] {
+        public override IEnumerable<uint> Units { get; set; } = new uint[] {
             CustomRoleTypes.SerpentHandCommander, };
 
         /// <inheritdoc />
-        public virtual int Probability { get; set; } = 100;
+        public override int Probability { get; set; } = 100;
+
+
+
 
         /// <inheritdoc />
-        public virtual SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
-            SpawnableTeamType.None,
-            SpawnableTeamType.NineTailedFox,
-            SpawnableTeamType.ChaosInsurgency,
-        };
+        //public override SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
+        //    SpawnableTeamType.None,
+        //    SpawnableTeamType.NineTailedFox,
+        //    SpawnableTeamType.ChaosInsurgency,
+        //};
 
         /// <inheritdoc />
-        public virtual bool UseTickets { get; set; } = true;
+        // public override bool UseTickets { get; set; } = false;
 
         /// <inheritdoc />
-        public virtual uint Tickets { get; set; } = 13;
+        //public override uint Tickets { get; set; } = 13;
 
         /// <inheritdoc />
-        public virtual RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.Scientist;
+        //public override RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.None;
 
         /// <inheritdoc />
-        public virtual Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive };
+        public override Team RequiredTeamToSpawn { get; set; } = Team.Dead;
+
+        /// <inheritdoc />
+        public override uint RequiredCustomTeamToSpawn { get; set; }
+
+        /// <inheritdoc />
+        public override uint RequiredCustomRoleToSpawn { get; set; }
+
+        
+
+        /// <inheritdoc />
+        public override Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive };
 
     }
 }

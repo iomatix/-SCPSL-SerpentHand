@@ -1,10 +1,12 @@
 ﻿namespace SerpentHand.Roles
 {
+    using Exiled.CustomModules.API.Features;
     using Exiled.CustomModules.API.Features.Attributes;
     using Exiled.CustomModules.API.Features.CustomRoles;
     using PlayerRoles;
     using SerpentHand.Behaviours;
     using SerpentHand.Types;
+    using System;
 
     /// <inheritdoc />
     [ModuleIdentifier]
@@ -20,19 +22,28 @@
         public override bool IsTeamUnit { get; set; } = true;
 
         /// <inheritdoc />
+        public override bool IsEnabled { get; set; } = true;
+
+        /// <inheritdoc />
+        public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
+
+        /// <inheritdoc />
+        public override int Probability { get; set; } = 100;
+
+        /// <inheritdoc />
         public override Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive, };
 
         /// <inheritdoc />
         //public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
 
         /// <inheritdoc />
-        //public override RoleTypeId AssignFromRole { get; set; } = RoleTypeId.Scientist;
+        public override RoleTypeId AssignFromRole { get; set; } = RoleTypeId.None;
 
         /// <inheritdoc />
         //public override int Probability { get; set; } = 100;
 
         /// <inheritdoc />
-        //public override int MaxInstances { get; set; } = 111;
+        public override int MaxInstances { get; set; } = 1;
 
         /// <inheritdoc />
         //public override bool IsEnabled { get; set; } = true;
@@ -43,8 +54,6 @@
 
         /// <inheritdoc />
         public override bool IsScp { get; set; } = false;
-
-
 
     }
 }

@@ -108,6 +108,7 @@
     <Compile Include="SerpentHand\SerpentHandRoleCommanderConfig.cs" />
     <Compile Include="SerpentHand\SerpentHandRoleCommanderBehaviour.cs" />
     <Compile Include="SerpentHand\SerpentHandRoleCommander.cs" />
+    <Compile Include="SerpentHand\SerpentHandTeamConfig.cs" />
     <Compile Include="SerpentHand\SerpentHandTeam.cs" />
     <Compile Include="Translation.cs" />
   </ItemGroup>
