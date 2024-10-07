@@ -22,8 +22,8 @@
         {
             UseDefaultRoleOnly = true,
             IsRoleDynamic = false,
-            UniqueRole = RoleTypeId.Scientist,
-            SpawnReason = RoleChangeReason.RemoteAdmin,
+            UniqueRole = RoleTypeId.CustomRole,
+            SpawnReason = RoleChangeReason.Respawn,
             SpawnFlags = RoleSpawnFlags.All,
             SpawnProperties =
             {
@@ -35,23 +35,24 @@
                 DynamicSpawnPoints =
                 {
                     new DynamicSpawnPoint { Location = SpawnLocationType.InsideServersBottom, Chance = 100.0f },
+                    new DynamicSpawnPoint { Location = SpawnLocationType.InsideSurfaceNuke, Chance = 100.0f },
 
                 },
                 RoleSpawnPoints =
                 {
-                    new RoleSpawnPoint { Role = RoleTypeId.ChaosRifleman, Chance = 1.0f },
+                    new RoleSpawnPoint { Role = RoleTypeId.ChaosRifleman, Chance = 100.0f },
                 },
             },
 
             Health = 135,
             MaxHealth = 135,
-            ArtificialHealth = 75,
+            ArtificialHealth = 0,
             MaxArtificialHealth = 125,
 
             Scale = 1.01f,
             CustomInfo = "Serpent`s Hand Commander\nLeads the SCP rescue mission",
 
-            SpawnedText = new TextDisplay("You`ve been spawned as Serpent`s Hand Commander.\nLead your troops and rescue the SCPs.", 10, channel: TextChannelType.Broadcast),
+            SpawnedText = new TextDisplay("You`ve been spawned as Serpent`s Hand Commander.\nLead your troops and rescue the SCPs.", 12, channel: TextChannelType.Broadcast),
 
             PreservePosition = false,
 

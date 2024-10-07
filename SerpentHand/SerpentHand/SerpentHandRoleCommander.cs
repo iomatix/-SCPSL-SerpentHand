@@ -25,7 +25,7 @@
         public override bool IsEnabled { get; set; } = true;
 
         /// <inheritdoc />
-        public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
+        public override RoleTypeId Role { get; set; } = RoleTypeId.ChaosConscript;
 
         /// <inheritdoc />
         public override int Probability { get; set; } = 100;
@@ -34,19 +34,10 @@
         public override Team[] TeamsOwnership { get; set; } = { Team.SCPs, Team.OtherAlive, };
 
         /// <inheritdoc />
-        //public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
-
-        /// <inheritdoc />
         public override RoleTypeId AssignFromRole { get; set; } = RoleTypeId.None;
 
         /// <inheritdoc />
-        //public override int Probability { get; set; } = 100;
-
-        /// <inheritdoc />
         public override int MaxInstances { get; set; } = 1;
-
-        /// <inheritdoc />
-        //public override bool IsEnabled { get; set; } = true;
 
         /// <inheritdoc />
         public override string Description { get; set; } = "The Serpent`s Hand is a small but formidable organization that embraces the use and existence of paranormal items, particularly humanoid and sapient SCP objects. They have been vocal in judging the containment and destruction of SCP items, especially those not seen as dangerous.\n" +

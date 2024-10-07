@@ -41,20 +41,20 @@
 
 
         /// <inheritdoc />
-        //public override SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
-        //    SpawnableTeamType.None,
-        //    SpawnableTeamType.NineTailedFox,
-        //    SpawnableTeamType.ChaosInsurgency,
-        //};
+        public override SpawnableTeamType[] SpawnableFromTeams { get; set; } = {
+            SpawnableTeamType.None,
+            SpawnableTeamType.NineTailedFox,
+            SpawnableTeamType.ChaosInsurgency,
+        };
 
         /// <inheritdoc />
-        // public override bool UseTickets { get; set; } = false;
+        public override bool UseTickets { get; set; } = true;
 
         /// <inheritdoc />
-        //public override uint Tickets { get; set; } = 13;
+        public override uint Tickets { get; set; } = 13;
 
         /// <inheritdoc />
-        //public override RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.None;
+        public override RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.None;
 
         /// <inheritdoc />
         public override Team RequiredTeamToSpawn { get; set; } = Team.Dead;
